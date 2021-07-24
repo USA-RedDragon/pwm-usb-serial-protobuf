@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message DeviceState {
+    Configuration configuration = 1; // default startup power states
+    PowerState    usb0 = 2; // top usb port power state
+    PowerState    usb1 = 3; // bottom usb port power state
+}
+
+message Configuration {
+    PowerState usb0Restore = 1;
+    PowerState usb1Restore = 2;
+}
+
+message PowerState {
+    bool   power = 1;
+    uint32 dutyCycle = 2; // 0-255 duty cycle
+}
