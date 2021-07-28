@@ -1,4 +1,5 @@
 syntax = "proto3";
+option csharp_namespace = "ASCOM.DewPack.Proto";
 
 message DeviceState {
     Configuration configuration = 1; // default startup power states
